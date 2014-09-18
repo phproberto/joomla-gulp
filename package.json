@@ -16,7 +16,7 @@
     "build"
   ],
   "author": "Roberto Segura",
-  "license": "GPL v2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/phproberto/joomla-gulp/issues"
   },

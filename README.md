@@ -2,6 +2,8 @@
 
 Develop faster
 
+## Index  
+
 1. [What is this?](#whats-this)
 2. [How does it work?](#how-works)
 3. [Install](#install)
@@ -20,6 +22,7 @@ Develop faster
     2. [Second level](#second-level)
     3. [Third level](#third-level)
     3. [Fourth level](#fourth-level)
+5. [License](#license)
 
 ## <a name="whats-this"></a>1. What is this?
 
@@ -160,6 +163,10 @@ Finally you can call tasks specifically from one extension. Examples:
 
 `gulp copy:components.content` : Copy the content component to the test site  
 `gulp clean:plugins.authentication.joomla` : Clean the Joomla authentication plugin from the test site.  
-`gulp watch media.joomla` : Start watching for changes on the joomla media folder  
+`gulp watch:media.joomla` : Start watching for changes on the joomla media folder  
 `gulp copy:modules.frontend.latest-articles` : Copy a frontend module to the test site.  
-`gulp clean:templates.frontend.protostar` : Copy this frontend template into the frontend  
+`gulp watch:templates.frontend.protostar` : Watch changes on protostar frontend templat  
+
+## <a name="license"></a>License
+
+joomla-gulp is released under the MIT license. See LICENSE for details.  
