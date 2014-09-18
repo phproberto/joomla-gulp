@@ -1,0 +1,4 @@
+var requireDir = require('require-dir');
+
+var dir = requireDir('./joomla-gulp', {recurse: true});
+var dir = requireDir('./joomla-gulp-extensions', {recurse: true});

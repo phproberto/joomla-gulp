@@ -1,0 +1,6 @@
+{
+	"wwwDir"           : "/var/www/jcms3x",
+	"browserSyncProxy" : "localhost",
+	"extensions"       : {
+	}
+}

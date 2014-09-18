@@ -1,0 +1,44 @@
+{
+  "name": "joomla-gulp",
+  "version": "1.0.0",
+  "description": "A Gulp based build system for Joomla! extension developers",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phproberto/joomla-gulp.git"
+  },
+  "keywords": [
+    "joomla",
+    "gulp",
+    "build"
+  ],
+  "author": "Roberto Segura",
+  "license": "GPL v2.0",
+  "bugs": {
+    "url": "https://github.com/phproberto/joomla-gulp/issues"
+  },
+  "homepage": "https://github.com/phproberto/joomla-gulp",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-uglify": "^0.3.2",
+    "gulp-imagemin": "^0.5.1",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-replace": "^0.3.0",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-zip": "^0.3.4",
+    "browser-sync": "^1.3.2",
+    "require-dir": "^0.1.0",
+    "gulp-changed": "^1.0.0",
+    "gulp-util": "^3.0.1",
+    "gulp-less": "^1.3.5",
+    "gulp-concat": "^2.4.1",
+    "gulp-coffee": "^2.2.0",
+    "gulp-jshint": "^1.8.4",
+    "gulp-phpcs": "^0.2.1"
+  }
+}

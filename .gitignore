@@ -1,0 +1,14 @@
+gulp-config.json
+
+# Modules will be installed through npm on each machine
+node_modules
+
+# Ignore releases
+releases/*
+!releases/.gitignore
+
+# Sass cache
+.sass-cache
+
+# Never ignore
+!.gitignore
