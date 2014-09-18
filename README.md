@@ -15,7 +15,11 @@ Develop faster
     8. [Create your config](#create-config)
     9. [Create your gulpfile.js](#create-gulpfile)
     10. [Start writing extensions](#start-writing-extensions)
-4. [Naming conventions](#naming.conventions)
+4. [Naming conventions](#naming-conventions)
+    1. [Main level](#main-level)
+    2. [Second level](#second-level)
+    3. [Third level](#third-level)
+    3. [Fourth level](#fourth-level)
 
 ## <a name="whats-this"></a>1. What is this?
 
@@ -91,7 +95,7 @@ For example to install the Sass compiler:
 
 Copy the `joomla-gulp-extensions-sample` folder inside this repo into your project's root folder and rename it to `joomla-gulp-extensions`. That folder contains a sample  structure.  
 
-Note: You can rename folders to anything you want. For example I prefer to use `gulp` instead of `joomla-gulp` (I clone it directly to the `gulp` folder) and I use `gulp-extensions` instead of `joomla-gulp-extensions`. You only have to ensure that your `gulpfile.js` require dirs point to the right folders.
+Note: You can rename folders to anything you want. For example I prefer to use `gulp` instead of `joomla-gulp` (I clone it directly to the `gulp` folder) and I use `gulp-extensions` install-noded of `joomla-gulp-extensions`. You only have to ensure that your `gulpfile.js` require dirs point to the right folders.
 
 ### <a name="create-config"></a>3.8. Create your config file
 
@@ -124,3 +128,38 @@ Sample extensions definition:
 		}
 	}
 ```
+## <a name="naming-conventions"></a>4. Naming conventions
+
+The system is build on a hierarchical task structure in mind. 
+
+### <a name="main-level"></a>4.1 Main level
+
+There is the standard gulp call:
+
+`gulp` :  It will clean the test site, copy the new files, start watching for changes on any extension and launch browser sync to start seeing your changes in real time.  
+
+### <a name="second-level"></a>4.2. Second level
+
+You can also call the main tasks separately:  
+
+`gulp clean` : Will clean the test site  
+`gulp copy` : Will copy the repo content to the test site  
+`gulp watch` : Will watch for file changes on the repo folder and then acting accordingly  
+
+### <a name="third-level"></a>4.3. Third level
+
+And of course you can call the task by extension type:  
+
+`gulp clean:components` : It will clean all the components  
+`gulp copy:plugins` : It will copy all the plugins  
+`gulp watch:templates` : It will start tracking changes on templates  
+
+### <a name="fourth-level"></a>4.4. Fourth level
+
+Finally you can call tasks specifically from one extension. Examples:  
+
+`gulp copy:components.content` : Copy the content component to the test site  
+`gulp clean:plugins.authentication.joomla` : Clean the Joomla authentication plugin from the test site.  
+`gulp watch media.joomla` : Start watching for changes on the joomla media folder  
+`gulp copy:modules.frontend.latest-articles` : Copy a frontend module to the test site.  
+`gulp clean:templates.frontend.protostar` : Copy this frontend template into the frontend  
