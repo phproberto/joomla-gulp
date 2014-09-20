@@ -127,7 +127,7 @@ Sample extensions definition:
 			"system"         : ["languagecode"]
 		},
 		"templates"  : {
-			"frontend"       : ["tudomus"]
+			"frontend"       : ["protostar"]
 		}
 	}
 ```
