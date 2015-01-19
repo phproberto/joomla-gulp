@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 
 // Load config
-var extension = require('../../package.json');
-var config    = require('../../gulp-config.json');
+var extension = require('../../../package.json');
+var config    = require('../../../gulp-config.json');
 
 // Tools / Dependencies
 var browserSync = require('browser-sync');
