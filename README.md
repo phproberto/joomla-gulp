@@ -131,6 +131,24 @@ Sample extensions definition:
 		}
 	}
 ```
+
+For this example, you would then need to create these files:
+
+```
+joomla-gulp-extensios/components/content.js
+joomla-gulp-extensios/libraries/joomla.js
+joomla-gulp-extensios/media/joomla.js
+joomla-gulp-extensios/backend/quickicon.js
+joomla-gulp-extensios/frontend/quickicon.js
+joomla-gulp-extensios/authentication/joomla.js
+joomla-gulp-extensios/content/emailcloak.js
+joomla-gulp-extensios/system/languagecode.js
+joomla-gulp-extensios/templates/frontend/protostar.js
+```
+
+If you want an example of a project that uses joomla-gulp, have a look at [`mod_phproberto_ghcard`](https://github.com/phproberto/mod_phproberto_ghcard).
+
+
 ## <a name="naming-conventions"></a>4. Naming conventions
 
 The system is build on a hierarchical task structure in mind. 
