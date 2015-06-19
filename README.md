@@ -51,30 +51,30 @@ The main idea of this build system is that you always develop your extensions wi
 
 ## <a name="install"></a>3. Install
 
-### <a name="clone"></a>3.1. Clone this repo in your project
-
-In your project's root:
-
-`git clone git@github.com:phproberto/joomla-gulp.git`
-
-### <a name="install-node"></a>3.2. Install node.js
+### <a name="install-node"></a>3.1. Install node.js
 
 I won't extend here. Visit http://nodejs.org/ or search google.
 
-### <a name="install-gulp"></a>3.3. Install Gulp
-Install Gulp globally so it's available in all your projects:  
-`sudo npm install -g gulp`  
-
-Install Gulp on your project's folder:  
-`npm install --save-dev gulp`  
-
-### <a name="initialise-package"></a>3.4. Initialise your project's package.json file
+### <a name="initialise-package"></a>3.2. Initialise your project's package.json file
 
 On your project's folder run:
 
 `npm init`
 
 That will create a package.json file with the information that you provide.  
+
+### <a name="install-joomla-gulp"></a>3.3. Install joomla-gulp
+
+In your project's root:
+
+`npm install --save-dev joomla-gulp`
+
+### <a name="install-gulp"></a>3.4. Install Gulp
+Install Gulp globally so it's available in all your projects:  
+`sudo npm install -g gulp`  
+
+Install Gulp on your project's folder:  
+`npm install --save-dev gulp`  
 
 ### <a name="install-joomla-gulp"></a>3.5. Install joomla-gulp requirements
 
@@ -92,15 +92,17 @@ For example to install the Sass compiler:
 
 `npm install gulp-sass --save-dev`
 
-### <a name="create-gulp-extensions"></a>3.7. Create your joomla-gulp-extensions folder
+### <a name="create-gulp-extensions"></a>3.7. Copy sample files and directories
 
-Copy the `joomla-gulp-extensions-sample` folder inside this repo into your project's root folder and rename it to `joomla-gulp-extensions`. That folder contains a sample  structure.  
+Copy the sample files and directories into your project root's folder:
 
-Note: You can rename folders to anything you want. For example I prefer to use `gulp` instead of `joomla-gulp` (I clone it directly to the `gulp` folder) and I use `gulp-extensions` install-noded of `joomla-gulp-extensions`. You only have to ensure that your `gulpfile.js` require dirs point to the right folders.
+    cp node_modules/joomla-gulp/gulp-config.json.sample gulp-config.json
+    cp node_modules/joomla-gulp/gulpfile.js.sample gulpfile.js
+    cp -rT node_modules/joomla-gulp/joomla-gulp-extensions-sample joomla-gulp-extensions
 
 ### <a name="create-config"></a>3.8. Create your config file
 
-Copy the file `gulp-config.json.sample` into your project's root folder and rename it to `gulp-config.json` and customise the params inside to fit your project requirements.
+Customise the params inside of `gulp-config.json` to fit your project requirements.
 
 #### Configuration options
 
