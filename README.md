@@ -80,9 +80,7 @@ That will create a package.json file with the information that you provide.
 
 This project only has 3 dependencies. You can install them from your project's root:
 
-`npm install browser-sync --save-dev`  
-`npm install gulp-zip --save-dev`  
-`npm install require-dir --save-dev`  
+`npm install --save-dev browser-sync gulp-zip require-dir`
 
 ### <a name="install-gulp-plugins"></a>3.6. Install your favorite Gulp plugins
 
