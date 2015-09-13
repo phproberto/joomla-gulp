@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var config = require('../../../gulp-config.json');
+var config = require('../../../gulp-config-extensions.json');
 
 /**
  * Get the list of available plugins
@@ -11,10 +11,10 @@ function getPlugins()
 {
 	var results = []
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('plugins')) {
+	if (config.hasOwnProperty('plugins')) {
 
-		for(var type in config.extensions.plugins) {
-			var sourceArray = config.extensions.plugins[type];
+		for(var type in config.plugins) {
+			var sourceArray = config.plugins[type];
 
 			for (index = 0; index < sourceArray.length; ++index) {
 			    results.push(type + '.' + sourceArray[index]);

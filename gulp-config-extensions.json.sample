@@ -1,0 +1,12 @@
+{
+	"components" : ["sample"],
+	"libraries" : ["sample"],
+	"modules" : {
+		"frontend" : [
+			"mod_sample"
+		]
+	},
+	"plugins" : {
+		"content" : ["sample"]
+	}
+}

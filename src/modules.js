@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var config = require('../../../gulp-config.json');
+var config = require('../../../gulp-config-extensions.json');
 
 /**
  * Get the available modules from paths
@@ -12,10 +12,10 @@ var config = require('../../../gulp-config.json');
 function getModules(app) {
 	var results = [];
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('modules')
-		&& config.extensions.modules.hasOwnProperty(app)
+	if (config.hasOwnProperty('modules')
+		&& config.modules.hasOwnProperty(app)
 	) {
-		var sourceArray = config.extensions.modules[app];
+		var sourceArray = config.modules[app];
 
 		for (index = 0; index < sourceArray.length; ++index) {
 		    results.push(app + '.' + sourceArray[index]);

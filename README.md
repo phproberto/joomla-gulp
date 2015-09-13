@@ -2,7 +2,7 @@
 
 Develop faster
 
-## Index  
+## Index
 
 1. [What is this?](#whats-this)
 2. [How does it work?](#how-works)
@@ -15,8 +15,9 @@ Develop faster
     6. [Install your favorite Gulp plugins](#install-gulp-plugins)
     7. [Create your joomla-gulp-extensions folder](#create-gulp-extensions)
     8. [Create your config](#create-config)
-    9. [Create your gulpfile.js](#create-gulpfile)
-    10. [Start writing extensions](#start-writing-extensions)
+    9. [Adapt your local config](#local-config)
+    10. [Create your gulpfile.js](#create-gulpfile)
+    11. [Start writing extensions](#start-writing-extensions)
 4. [Naming conventions](#naming-conventions)
     1. [Main level](#main-level)
     2. [Second level](#second-level)
@@ -43,7 +44,7 @@ These are mainly the tools I use and the tools I think we should move forward bu
 
 ## <a name="how-works"></a>2. How does it work?
 
-This is a reusable base Gulp system for Joomla! extension development. Do not expect something magical here except that and task naming conventions. This repo is just a base system to allow you to add your extensions build scripts in a standard way so you can focus on the project specific stuff. 
+This is a reusable base Gulp system for Joomla! extension development. Do not expect something magical here except that and task naming conventions. This repo is just a base system to allow you to add your extensions build scripts in a standard way so you can focus on the project specific stuff.
 
 This base build system does not depend on any project structure because you specify it on your extension build scripts.
 
@@ -62,11 +63,11 @@ In your project's root:
 I won't extend here. Visit http://nodejs.org/ or search google.
 
 ### <a name="install-gulp"></a>3.3. Install Gulp
-Install Gulp globally so it's available in all your projects:  
-`sudo npm install -g gulp`  
+Install Gulp globally so it's available in all your projects:
+`sudo npm install -g gulp`
 
-Install Gulp on your project's folder:  
-`npm install --save-dev gulp`  
+Install Gulp on your project's folder:
+`npm install --save-dev gulp`
 
 ### <a name="initialise-package"></a>3.4. Initialise your project's package.json file
 
@@ -74,15 +75,15 @@ On your project's folder run:
 
 `npm init`
 
-That will create a package.json file with the information that you provide.  
+That will create a package.json file with the information that you provide.
 
 ### <a name="install-joomla-gulp"></a>3.5. Install joomla-gulp requirements
 
 This project only has 3 dependencies. You can install them from your project's root:
 
-`npm install browser-sync --save-dev`  
-`npm install gulp-zip --save-dev`  
-`npm install require-dir --save-dev`  
+`npm install browser-sync --save-dev`
+`npm install gulp-zip --save-dev`
+`npm install require-dir --save-dev`
 
 ### <a name="install-gulp-plugins"></a>3.6. Install your favorite Gulp plugins
 
@@ -96,24 +97,18 @@ For example to install the Sass compiler:
 
 ### <a name="create-gulp-extensions"></a>3.7. Create your joomla-gulp-extensions folder
 
-Copy the `joomla-gulp-extensions-sample` folder inside this repo into your project's root folder and rename it to `joomla-gulp-extensions`. That folder contains a sample  structure.  
+Copy the `joomla-gulp-extensions-sample` folder inside this repo into your project's root folder and rename it to `joomla-gulp-extensions`. That folder contains a sample  structure.
 
 Note: You can rename folders to anything you want. For example I prefer to use `gulp` instead of `joomla-gulp` (I clone it directly to the `gulp` folder) and I use `gulp-extensions` install-noded of `joomla-gulp-extensions`. You only have to ensure that your `gulpfile.js` require dirs point to the right folders.
 
 ### <a name="create-config"></a>3.8. Create your config file
 
-Copy the file `gulp-config.json.sample` into your project's root folder and rename it to `gulp-config.json` and customise the params inside to fit your project requirements.
-
-#### Configuration options
-
-* **wwwDir**           : The local folder where your website is hosted  
-* **browserSyncProxy** : The host to use for browser-sync. You can create a virtualhost or directly use localhost.  
-* **extensions**       : Object containing the list of extensions available on your repository  
+Copy the file `gulp-config-extensions.json.sample` into your project's root folder and rename it to `gulp-config-extensions.json` and customise the params inside to fit your project requirements.
 
 Sample extensions definition:
 
 ```
-	"extensions"       : {
+	{
 		"components" : ["content"],
 		"libraries"  : ["joomla"],
 		"media"      : ["joomla"],
@@ -131,42 +126,52 @@ Sample extensions definition:
 		}
 	}
 ```
+### <a name="local-config"></a>3.9. Create your local config file
+
+Copy the file `gulp-config.json.sample` into your project's root folder and rename it to `gulp-config.json` and customise the params inside to fit your local installation requirements.
+
+#### Configuration options
+
+* **wwwDir**           : The local folder where your website is hosted
+* **browserSyncProxy** : The host to use for browser-sync. You can create a virtualhost or directly use localhost.
+* **browser**          : The browser(s) to launch / reload
+
 ## <a name="naming-conventions"></a>4. Naming conventions
 
-The system is build on a hierarchical task structure in mind. 
+The system is build on a hierarchical task structure in mind.
 
 ### <a name="main-level"></a>4.1 Main level
 
 There is the standard gulp call:
 
-`gulp` :  It will clean the test site, copy the new files, start watching for changes on any extension and launch browser sync to start seeing your changes in real time.  
+`gulp` :  It will clean the test site, copy the new files, start watching for changes on any extension and launch browser sync to start seeing your changes in real time.
 
 ### <a name="second-level"></a>4.2. Second level
 
-You can also call the main tasks separately:  
+You can also call the main tasks separately:
 
-`gulp clean` : Will clean the test site  
-`gulp copy` : Will copy the repo content to the test site  
-`gulp watch` : Will watch for file changes on the repo folder and then acting accordingly  
+`gulp clean` : Will clean the test site
+`gulp copy` : Will copy the repo content to the test site
+`gulp watch` : Will watch for file changes on the repo folder and then acting accordingly
 
 ### <a name="third-level"></a>4.3. Third level
 
-And of course you can call the task by extension type:  
+And of course you can call the task by extension type:
 
-`gulp clean:components` : It will clean all the components  
-`gulp copy:plugins` : It will copy all the plugins  
-`gulp watch:templates` : It will start tracking changes on templates  
+`gulp clean:components` : It will clean all the components
+`gulp copy:plugins` : It will copy all the plugins
+`gulp watch:templates` : It will start tracking changes on templates
 
 ### <a name="fourth-level"></a>4.4. Fourth level
 
-Finally you can call tasks specifically from one extension. Examples:  
+Finally you can call tasks specifically from one extension. Examples:
 
-`gulp copy:components.content` : Copy the content component to the test site  
-`gulp clean:plugins.authentication.joomla` : Clean the Joomla authentication plugin from the test site.  
-`gulp watch:media.joomla` : Start watching for changes on the joomla media folder  
-`gulp copy:modules.frontend.latest-articles` : Copy a frontend module to the test site.  
-`gulp watch:templates.frontend.protostar` : Watch changes on protostar frontend templat  
+`gulp copy:components.content` : Copy the content component to the test site
+`gulp clean:plugins.authentication.joomla` : Clean the Joomla authentication plugin from the test site.
+`gulp watch:media.joomla` : Start watching for changes on the joomla media folder
+`gulp copy:modules.frontend.latest-articles` : Copy a frontend module to the test site.
+`gulp watch:templates.frontend.protostar` : Watch changes on protostar frontend templat
 
 ## <a name="license"></a>License
 
-joomla-gulp is released under the MIT license. See LICENSE for details.  
+joomla-gulp is released under the MIT license. See LICENSE for details.

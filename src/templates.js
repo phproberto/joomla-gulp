@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var config = require('../../../gulp-config.json');
+var config = require('../../../gulp-config-extensions.json');
 
 /**
  * Get the available templates
@@ -12,10 +12,10 @@ var config = require('../../../gulp-config.json');
 function getTemplates(app) {
 	var results = [];
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('templates')
-		&& config.extensions.templates.hasOwnProperty(app)
+	if (config.hasOwnProperty('templates')
+		&& config.templates.hasOwnProperty(app)
 	) {
-		var sourceArray = config.extensions.templates[app];
+		var sourceArray = config.templates[app];
 
 		for (index = 0; index < sourceArray.length; ++index) {
 		    results.push(app + '.' + sourceArray[index]);
