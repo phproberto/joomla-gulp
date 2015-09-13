@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var config = require('../../../gulp-config.json');
+var config = require('../../../gulp-config-extensions.json');
 
 /**
  * Get the list of the active components from paths
@@ -10,8 +10,8 @@ var config = require('../../../gulp-config.json');
 function getComponents() {
 	var results = [];
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('components')) {
-		var sourceArray = config.extensions.components;
+	if (config.hasOwnProperty('components')) {
+		var sourceArray = config.components;
 
 		for (index = 0; index < sourceArray.length; ++index) {
 		    results.push(sourceArray[index]);

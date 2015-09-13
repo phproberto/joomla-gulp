@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var config = require('../../../gulp-config.json');
+var config = require('../../../gulp-config-extensions.json');
 
 /**
  * Get the list of libraries
@@ -10,8 +10,8 @@ var config = require('../../../gulp-config.json');
 function getLibraries() {
 	var results = [];
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('libraries')) {
-		var sourceArray = config.extensions.libraries;
+	if (config.hasOwnProperty('libraries')) {
+		var sourceArray = config.libraries;
 
 		for (index = 0; index < sourceArray.length; ++index) {
 		    results.push(sourceArray[index]);

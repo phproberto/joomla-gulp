@@ -9,10 +9,13 @@ var browserSync = require('browser-sync');
 var requireDir  = require('require-dir');
 var zip         = require('gulp-zip');
 
+var browser = config.hasOwnProperty('browser') ? config.browser : "default";
+
 // Browser sync
 gulp.task('browser-sync', function() {
-    return browserSync({
-        proxy: config.browserSyncProxy
+	return browserSync({
+		proxy: config.browserSyncProxy,
+		browser: browser
     });
 });
 
