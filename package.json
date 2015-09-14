@@ -1,6 +1,6 @@
 {
   "name": "joomla-gulp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Gulp based build system for Joomla! extension developers",
   "main": "gulpfile.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://github.com/phproberto/joomla-gulp/issues"
   },
   "homepage": "https://github.com/phproberto/joomla-gulp",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^1.3.2",
     "gulp": "^3.8.6",
     "gulp-zip": "^0.3.4",
