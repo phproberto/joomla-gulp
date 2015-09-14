@@ -4,6 +4,9 @@ var gulp = require('gulp');
 var extension = require('../../../package.json');
 var config    = require('../../../gulp-config.json');
 
+// Check if config has defaultTasks defined
+var defaultTasks = config.hasOwnProperty('defaultTasks') ? config.defaultTasks : ['copy', 'watch', 'browser-sync'];
+
 // Tools / Dependencies
 var browserSync = require('browser-sync');
 var requireDir  = require('require-dir');
@@ -85,5 +88,5 @@ gulp.task('release', function () {
 });
 
 // Default task
-gulp.task('default', ['copy', 'watch', 'browser-sync'], function() {
+gulp.task('default', defaultTasks, function() {
 });

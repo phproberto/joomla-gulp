@@ -1,6 +1,7 @@
 {
 	"wwwDir"           : "/var/www/jcms3x",
 	"browserSyncProxy" : "localhost",
+	"defaultTasks"     : ['copy', 'watch', 'browser-sync'],
 	"extensions"       : {
 	}
 }
