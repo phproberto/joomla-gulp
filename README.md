@@ -33,7 +33,7 @@ The main idea of this build system is that you always develop your extensions wi
 
 ## Documentation 
 
-See the [docs folder](./docs/REAME.md).
+See the [docs folder](./docs/README.md).
 
 ## <a name="license"></a>License
 
