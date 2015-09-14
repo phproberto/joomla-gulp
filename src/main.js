@@ -24,6 +24,7 @@ gulp.task(
 		'clean:libraries',
 		'clean:media',
 		'clean:modules',
+		'clean:packages',
 		'clean:plugins',
 		'clean:templates'
 	], function() {
@@ -36,6 +37,7 @@ gulp.task('copy', [
 		'copy:libraries',
 		'copy:media',
 		'copy:modules',
+		'copy:packages',
 		'copy:plugins',
 		'copy:templates'
 	], function() {
@@ -48,6 +50,7 @@ gulp.task('watch', [
 		'watch:libraries',
 		'watch:media',
 		'watch:modules',
+		'watch:packages',
 		'watch:plugins',
 		'watch:templates'
 	], function() {
