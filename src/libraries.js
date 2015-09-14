@@ -2,6 +2,13 @@ var gulp = require('gulp');
 
 var config = require('../../../gulp-config.json');
 
+// Do we have a specifc extensions file?
+try {
+    var extensions = require('../../../gulp-extensions.json');
+} catch(err) {
+    var extensions = config.extensions;
+}
+
 /**
  * Get the list of libraries
  *
@@ -10,8 +17,8 @@ var config = require('../../../gulp-config.json');
 function getLibraries() {
 	var results = [];
 
-	if (config.hasOwnProperty('extensions') && config.extensions.hasOwnProperty('libraries')) {
-		var sourceArray = config.extensions.libraries;
+	if (extensions && extensions.hasOwnProperty('libraries')) {
+		var sourceArray = extensions.libraries;
 
 		for (index = 0; index < sourceArray.length; ++index) {
 		    results.push(sourceArray[index]);
