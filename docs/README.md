@@ -55,7 +55,7 @@ You can install dependencies from your project's root:
 
 Gulp & npm include a great list of plugins that you can use for your projects. 
 
-I recommend you to look at this [readme's list of available extensions](#plugins). to start with. You can install any of them with:
+I recommend you to look at this [readme's list of available extensions](../README.md#plugins). to start with. You can install any of them with:
 
 `npm install {EXTENSION} --save-dev`
 

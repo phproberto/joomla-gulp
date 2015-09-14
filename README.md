@@ -6,7 +6,7 @@ A modern build system for Joomla! extension developers.
 
 Most Joomla! extensions out there still use a [Phing](http://www.phing.info/) based build system that makes the job but without using the latest technologies. [Gulp](http://gulpjs.com/) is a modern [Node.JS](http://nodejs.org/) based build system incredibly fast and easy to understand because it uses javascript code.
 
-## Some of the cool plugins available for Gulp:
+## <a name="plugins"></a> Some of the cool plugins available for Gulp:
 
 * Compile LESS ([gulp-less](https://github.com/plus3network/gulp-less)) & Sass ([gulp-sass](https://www.npmjs.org/package/gulp-sass)) files on the fly
 * Minify CSS ([gulp-minify-css](https://www.npmjs.org/package/gulp-minify-css)), JS ([gulp-uglify](https://www.npmjs.org/package/gulp-uglify)) files on the fly
