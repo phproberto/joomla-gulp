@@ -33,7 +33,19 @@ The main idea of this build system is that you always develop your extensions wi
 
 ## Documentation 
 
-See the [docs folder](./docs/README.md).
+For installation and usage see the [docs folder](./docs/README.md).
+
+## Changelog
+
+* v1.1.1
+    * Fix dependencies installed as submodules.
+* v1.1.0 
+    * Added support for packages.
+    * Now extensions list is an independent file to allow to track it with Git.
+    * Added support to fully customise browserSync settings.
+    * Added `defaultTasks` config parameter to customise tasks launched by default.
+* v1.0.0 
+    * Initial version.
 
 ## <a name="license"></a>License
 
