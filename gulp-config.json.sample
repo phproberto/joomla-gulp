@@ -3,7 +3,5 @@
 	browserConfig : {
 		proxy: "localhost"
 	},
-	"defaultTasks"     : ['copy', 'watch', 'browser-sync'],
-	"extensions"       : {
-	}
+	"defaultTasks"     : ['copy', 'watch', 'browser-sync']
 }

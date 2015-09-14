@@ -1,0 +1,7 @@
+gulp-config.json
+
+#Ignore docs
+docs/*
+
+# Never ignore
+!.gitignore

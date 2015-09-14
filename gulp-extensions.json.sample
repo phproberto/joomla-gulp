@@ -1,2 +1,18 @@
 {
+	"components" : ["content"],
+	"libraries"  : ["joomla"],
+	"media"      : ["joomla"],
+	"modules"    : {
+		"backend"        : ["quickicon"]
+		"frontend"       : ["latest-articles"]
+	},
+	"packages"   : ["weblinks"],
+	"plugins"    : {
+		"authentication" : ["joomla"],
+		"content"        : ["emailcloak"],
+		"system"         : ["languagecode"]
+	},
+	"templates"  : {
+		"frontend"       : ["protostar"]
+	}
 }
