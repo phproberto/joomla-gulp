@@ -4,6 +4,18 @@ var gulp = require('gulp');
 var extension = require('../../../package.json');
 var config    = require('../../../gulp-config.json');
 
+var defaultBrowserConfig = {
+	proxy : "localhost"
+}
+
+// Keep B/C support for old browserSyncProxy setting
+if (config.hasOwnProperty('browserSyncProxy'))
+{
+	defaultBrowserConfig.proxy = config.browserSyncProxy;
+}
+
+var browserConfig = config.hasOwnProperty('browserConfig') ? config.browserConfig : defaultBrowserConfig;
+
 // Check if config has defaultTasks defined
 var defaultTasks = config.hasOwnProperty('defaultTasks') ? config.defaultTasks : ['copy', 'watch', 'browser-sync'];
 
@@ -14,9 +26,7 @@ var zip         = require('gulp-zip');
 
 // Browser sync
 gulp.task('browser-sync', function() {
-    return browserSync({
-        proxy: config.browserSyncProxy
-    });
+    return browserSync(browserConfig);
 });
 
 // Clean test site
