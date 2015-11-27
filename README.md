@@ -21,6 +21,7 @@ Most Joomla! extensions out there still use a [Phing](http://www.phing.info/) ba
 
 * [`mod_phproberto_ghcard`](https://github.com/phproberto/mod_phproberto_ghcard).
 * [`com_xpert_testimonials`](https://github.com/themexpert/xpert-testimonials)
+* [`com_digicom`](https://github.com/themexpert/digicom)
 
 Do you have a project that uses it? Contribute it to this README.
 
