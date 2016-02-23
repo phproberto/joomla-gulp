@@ -66,3 +66,5 @@ gulp.task('watch:media',
 	function() {
 		return true;
 });
+
+exports getMedia = getMedia;

@@ -66,3 +66,5 @@ gulp.task('watch:libraries',
 	function() {
 		return true;
 });
+
+exports getLibraries = getLibraries;
