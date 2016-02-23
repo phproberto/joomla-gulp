@@ -68,3 +68,4 @@ gulp.task('watch:packages',
 });
 
 exports.getPackages = getPackages;
+exports.getPackagesTasks = getPackagesTasks;

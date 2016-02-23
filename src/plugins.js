@@ -75,3 +75,4 @@ gulp.task('watch:plugins',
 });
 
 exports.getPlugins = getPlugins;
+exports.getPluginsTasks = getPluginsTasks;

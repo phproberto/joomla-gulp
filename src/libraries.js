@@ -68,3 +68,4 @@ gulp.task('watch:libraries',
 });
 
 exports getLibraries = getLibraries;
+exports.getLibrariesTasks = getLibrariesTasks;

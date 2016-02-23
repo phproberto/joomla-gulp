@@ -68,3 +68,4 @@ gulp.task('watch:media',
 });
 
 exports getMedia = getMedia;
+exports getMediaTasks = getMediaTasks;

@@ -68,3 +68,4 @@ gulp.task('watch:components',
 });
 
 exports.getComponents = getComponents;
+exports.getComponentsTasks = getComponentsTasks;

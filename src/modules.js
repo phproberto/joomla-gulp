@@ -105,3 +105,4 @@ gulp.task('watch:modules.backend',
 });
 
 exports.getModules = getModules;
+exports.getModulesTasks = getModulesTasks;

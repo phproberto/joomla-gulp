@@ -104,3 +104,4 @@ gulp.task('watch:templates.backend',
 });
 
 exports.getTemplates = getTemplates;
+exports.getTemplatesTasks = getTemplatesTasks;
