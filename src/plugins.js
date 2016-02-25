@@ -73,3 +73,6 @@ gulp.task('watch:plugins',
 	function() {
 		return true;
 });
+
+exports.getPlugins = getPlugins;
+exports.getPluginsTasks = getPluginsTasks;
