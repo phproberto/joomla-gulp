@@ -4,7 +4,7 @@ A modern build system for Joomla! extension developers.
 
 ## What is this?
 
-Most Joomla! extensions out there still use a [Phing](http://www.phing.info/) based build system that makes the job but without using the latest technologies. [Gulp](http://gulpjs.com/) is a modern [Node.JS](http://nodejs.org/) based build system incredibly fast and easy to understand because it uses javascript code.
+Most Joomla! extensions out there still use a [Phing](http://www.phing.info/) based build system that does the job but without using the latest technologies. [Gulp](http://gulpjs.com/) is a modern [Node.JS](http://nodejs.org/) based build system, incredibly fast and easy to understand because it uses javascript code.
 
 ## <a name="plugins"></a> Some of the cool plugins available for Gulp:
 
@@ -31,7 +31,7 @@ This is a reusable base Gulp system for Joomla! extension development. Do not ex
 
 This base build system does not depend on any project structure because you specify it on your extension build scripts.
 
-The main idea of this build system is that you always develop your extensions within your extensions main folder (your project's repository). The build system copies files to your test site and reloads your browser when anything that you want to watch changes. It's easy to adapt to any workflow (like symblink folders) but it's not the native way it works.
+The main idea of this build system is that you always develop your extensions within your extensions main folder (your project's repository). The build system copies files to your test site and reloads your browser when anything that you want to watch changes. It's easy to adapt to any workflow (like symlink folders) but that's not the native way it works.
 
 ## Documentation 
 
