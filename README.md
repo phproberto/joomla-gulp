@@ -27,7 +27,7 @@ Do you have a project that uses it? Contribute it to this README.
 
 ## How does it work?
 
-This is a reusable base Gulp system for Joomla! extension development. Do not expect something magical here except that and task naming conventions. This repo is just a base system to allow you to add your extensions build scripts in a standard way so you can focus on the project specific stuff. 
+This is a reusable base Gulp system for Joomla! extension development. Do not expect something magical here except that and task naming conventions. This repo is just a base system to allow you to add your extension's build scripts in a standard way so you can focus on the project specific stuff. 
 
 This base build system does not depend on any project structure because you specify it on your extension build scripts.
 
