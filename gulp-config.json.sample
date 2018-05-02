@@ -1,7 +1,7 @@
 {
 	"wwwDir"           : "/var/www/jcms3x",
-	browserConfig : {
-		proxy: "localhost"
+	"browserConfig" : {
+		"proxy": "localhost"
 	},
-	"defaultTasks"     : ['copy', 'watch', 'browser-sync']
+	"defaultTasks"     : ["copy", "watch", "browser-sync"]
 }
