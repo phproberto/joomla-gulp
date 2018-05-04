@@ -3,7 +3,7 @@
 	"libraries"  : ["joomla"],
 	"media"      : ["joomla"],
 	"modules"    : {
-		"backend"        : ["quickicon"]
+		"backend"        : ["quickicon"],
 		"frontend"       : ["latest-articles"]
 	},
 	"packages"   : ["weblinks"],
